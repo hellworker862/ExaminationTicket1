@@ -49,7 +49,6 @@ namespace ExaminationTicket1
                             Format: false,
                             Replace: replace);
                     }
-                    Thread.Sleep(10000);
                     app.ActiveDocument.SaveAs2(newFileName);
                     app.ActiveDocument.Close();
                 }
@@ -60,11 +59,7 @@ namespace ExaminationTicket1
                 finally
                 {
                     if (app != null)
-                    {
-                        if (app.ActiveDocument != null)
-                            app.ActiveDocument.Close();
                         app.Quit();
-                    }
                 }
             });
         }
